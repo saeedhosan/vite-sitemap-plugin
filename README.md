@@ -1,11 +1,11 @@
-[![npm version](https://badgen.net/npm/v/vite-sitemap)](https://www.npmjs.com/package/vite-sitemap)
-[![monthly downloads](https://badgen.net/npm/dm/vite-sitemap)](https://www.npmjs.com/package/vite-sitemap)
-[![types](https://badgen.net/npm/types/vite-sitemap)](https://github.com/saeedhosan/vite-sitemap/blob/main/src/types.ts)
-[![license](https://badgen.net/npm/license/vite-sitemap)](https://github.com/saeedhosan/vite-sitemap/blob/main/LICENSE.md)
+[![npm version](https://badgen.net/npm/v/vite-sitemap-plugin)](https://www.npmjs.com/package/vite-sitemap-plugin)
+[![monthly downloads](https://badgen.net/npm/dm/vite-sitemap-plugin)](https://www.npmjs.com/package/vite-sitemap-plugin)
+[![types](https://badgen.net/npm/types/vite-sitemap-plugin)](https://github.com/saeedhosan/vite-sitemap-plugin/blob/main/src/types.ts)
+[![license](https://badgen.net/npm/license/vite-sitemap-plugin)](https://github.com/saeedhosan/vite-sitemap-plugin/blob/main/LICENSE.md)
 
 ## Introduction
 
-The `vite-sitemap` plugin makes it easier to generate sitemaps for Vite projects.
+The `vite-sitemap-plugin` plugin makes it easier to generate sitemaps for Vite projects.
 
 It simplifies sitemap creation by producing a standardized, well-structured final output.
 
@@ -14,7 +14,7 @@ It simplifies sitemap creation by producing a standardized, well-structured fina
 Install the plugin using your preferred package manager:
 
 ```bash
-npm i -D vite-sitemap
+npm i -D vite-sitemap-plugin
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ To use the plugin, import it in your `vite.config.js` or `vite.config.ts` file a
 
 ```ts
 import { defineConfig } from "vite";
-import sitemap from "vite-sitemap";
+import sitemap from "vite-sitemap-plugin";
 
 export default defineConfig({
     plugins: [
@@ -62,7 +62,7 @@ The `sitemap` plugin accepts an options object with the following properties:
 
 ```ts
 import { defineConfig } from "vite";
-import sitemap from "vite-sitemap";
+import sitemap from "vite-sitemap-plugin";
 
 export default defineConfig({
     plugins: [
