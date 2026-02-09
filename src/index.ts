@@ -110,8 +110,6 @@ export default function sitemap(options: Options = {}): PluginOption {
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
-// ${sitemapEntry(base, "/", { lastmod, changefreq, priority: 1.0 })}
-// ${sitemapEntry(base, "", { lastmod, changefreq, priority: 0.9 })}
 ${sitemapEntries(base, urls, { lastmod, changefreq })}
 </urlset>`;
 
