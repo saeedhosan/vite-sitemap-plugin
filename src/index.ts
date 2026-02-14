@@ -103,7 +103,7 @@ export default function sitemap(options: Options = {}): PluginOption {
         changefreq = "daily",
     } = options;
 
-    // Vérification simple pour éviter le doublon homepage
+    // Simple check to avoid duplicating the homepage path
     const hasHome = urls.some((u) =>
         typeof u === "string"
             ? unslash(u) === ""
