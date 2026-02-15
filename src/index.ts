@@ -103,6 +103,13 @@ export default function sitemap(options: Options = {}): PluginOption {
         changefreq = "daily",
     } = options;
 
+    // Simple check to avoid duplicating the homepage path
+    const hasHome = urls.some((u) =>
+        typeof u === "string"
+            ? unslash(u) === ""
+            : unslash(u.path) === ""
+    );
+
     const sitemapXML = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
@@ -110,8 +117,7 @@ export default function sitemap(options: Options = {}): PluginOption {
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
-// ${sitemapEntry(base, "/", { lastmod, changefreq, priority: 1.0 })}
-// ${sitemapEntry(base, "", { lastmod, changefreq, priority: 0.9 })}
+${!hasHome ? sitemapEntry(base, "", { lastmod, changefreq, priority: 1.0 }) : ""}
 ${sitemapEntries(base, urls, { lastmod, changefreq })}
 </urlset>`;
 
